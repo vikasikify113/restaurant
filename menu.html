@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Luxe Dining</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LUXE<span>DINING</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="contact.html">Location</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+        <div class="hamburger">&#9776;</div>
+    </nav>
+
+    <section class="menu-section">
+        <h2 class="section-title">Our Menu</h2>
+        
+        <div class="menu-categories">
+            <button class="category-btn active" onclick="filterMenu('all')">All</button>
+            <button class="category-btn" onclick="filterMenu('food')">Food</button>
+            <button class="category-btn" onclick="filterMenu('drinks')">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+            <!-- Food Items -->
+            <div class="menu-item food">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="Gourmet Salad">
+                <div class="item-details">
+                    <h3>Avocado Summer Salad <span>$18</span></h3>
+                    <p>Fresh avocado, organic kale, quinoa, and lemon-tahini dressing.</p>
+                </div>
+            </div>
+            <div class="menu-item food">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877076234b2?w=500" alt="Ribeye Steak">
+                <div class="item-details">
+                    <h3>Prime Ribeye Steak <span>$42</span></h3>
+                    <p>Grass-fed beef, garlic butter, served with truffle mashed potatoes.</p>
+                </div>
+            </div>
+            <div class="menu-item food">
+                <img src="https://images.unsplash.com/photo-1473093226795-af99a2b6a09f?w=500" alt="Pasta">
+                <div class="item-details">
+                    <h3>Truffle Cream Pasta <span>$26</span></h3>
+                    <p>Handmade pappardelle with wild mushrooms and black truffle cream.</p>
+                </div>
+            </div>
+            <!-- Drinks Items -->
+            <div class="menu-item drinks">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf7659b730?w=500" alt="Cocktail">
+                <div class="item-details">
+                    <h3>Midnight Espresso Martini <span>$14</span></h3>
+                    <p>Fresh espresso, premium vodka, coffee liqueur, and a cocoa rim.</p>
+                </div>
+            </div>
+            <div class="menu-item drinks">
+                <img src="https://images.unsplash.com/photo-1544145945-f904253d7761?w=500" alt="Wine">
+                <div class="item-details">
+                    <h3>Vintage Cabernet Sauvignon <span>$12/glass</span></h3>
+                    <p>Full-bodied red wine with notes of blackcurrant and cedar.</p>
+                </div>
+            </div>
+            <div class="menu-item drinks">
+                <img src="https://images.unsplash.com/photo-1551024709-8f27a96777f7?w=500" alt="Mocktail">
+                <div class="item-details">
+                    <h3>Tropical Sunrise Mocktail <span>$9</span></h3>
+                    <p>Fresh pineapple, orange juice, grenadine, and sparkling water.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luxe Dining. All rights reserved.</p>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
