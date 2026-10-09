@@ -94,6 +94,11 @@
             background: #292721;
         }
 
+        .menu-item .image-fallback {
+            min-height: 220px;
+            background: linear-gradient(135deg, #292721, #171614);
+        }
+
         .item-details {
             padding: 20px;
         }
@@ -375,10 +380,19 @@
         document.getElementById('year').textContent =
             new Date().getFullYear();
 
-        // Hide an image if its URL cannot load.
+        // Keep image areas visible if a remote photo fails.
+        // The wine photo is confirmed to load in the current deployment, so use it
+        // as a last-resort fallback instead of leaving empty card space.
         document.querySelectorAll('.menu-item img').forEach(function (image) {
             image.addEventListener('error', function () {
-                image.style.display = 'none';
+                if (image.dataset.fallbackTried === 'true') {
+                    image.style.display = 'none';
+                    image.parentElement.classList.add('image-fallback');
+                    return;
+                }
+
+                image.dataset.fallbackTried = 'true';
+                image.src = 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=85';
             });
         });
     </script>
